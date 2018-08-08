@@ -54,8 +54,10 @@ app.get('/todos/:id', (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log("Started on port" + port);
+var port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+    console.log("App is running on port " + port);
 });
 
 
